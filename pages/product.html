@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details - NexusMart</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="body">
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="../index.html" class="nav__logo-link">NexusMart</a>
+        </div>
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="../index.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="shop.html" class="nav__link">Shop</a>
+            </li>
+            <li class="nav__item">
+              <a href="cart.html" class="nav__link">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="nav__cart-count">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="nav__theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="container">
+        <!-- Product Details -->
+        <section class="product-details">
+          <div class="product-details__gallery">
+            <div class="product-details__main-image">
+              <img src="" alt="" id="productImage" />
+            </div>
+            <div class="product-details__thumbnails">
+              <!-- Thumbnails will be dynamically populated -->
+            </div>
+          </div>
+          <div class="product-details__info">
+            <h1 class="product-details__title" id="productTitle"></h1>
+            <div class="product-details__rating">
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span
+                class="product-details__review-count"
+                id="reviewCount"
+              ></span>
+            </div>
+            <div class="product-details__price" id="productPrice"></div>
+            <div class="product-details__stock" id="productStock"></div>
+            <div
+              class="product-details__description"
+              id="productDescription"
+            ></div>
+            <div class="product-details__actions">
+              <div class="product-details__quantity">
+                <button
+                  class="button button--secondary"
+                  onclick="updateQuantity('decrease')"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  class="form__input"
+                  value="1"
+                  min="1"
+                  id="quantityInput"
+                />
+                <button
+                  class="button button--secondary"
+                  onclick="updateQuantity('increase')"
+                >
+                  +
+                </button>
+              </div>
+              <button class="button button--primary" onclick="addToCart()">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Product Tabs -->
+        <section class="product-tabs">
+          <div class="product-tabs__header">
+            <button
+              class="product-tabs__tab product-tabs__tab--active"
+              data-tab="description"
+            >
+              Description
+            </button>
+            <button class="product-tabs__tab" data-tab="specifications">
+              Specifications
+            </button>
+            <button class="product-tabs__tab" data-tab="reviews">
+              Reviews
+            </button>
+          </div>
+          <div class="product-tabs__content">
+            <div
+              class="product-tabs__panel product-tabs__panel--active"
+              id="descriptionPanel"
+            >
+              <div id="productDescription"></div>
+            </div>
+            <div class="product-tabs__panel" id="specificationsPanel">
+              <div id="productSpecifications"></div>
+            </div>
+            <div class="product-tabs__panel" id="reviewsPanel">
+              <div id="productReviews"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Related Products -->
+        <section class="related-products">
+          <h2 class="section-title">Related Products</h2>
+          <div class="products__grid">
+            <!-- Related products will be dynamically populated -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__section">
+          <h3 class="footer__title">About Us</h3>
+          <p class="footer__text">
+            NexusMart is your one-stop destination for premium products.
+          </p>
+        </div>
+        <div class="footer__section">
+          <h3 class="footer__title">Quick Links</h3>
+          <ul class="footer__list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h3 class="footer__title">Connect With Us</h3>
+          <div class="footer__social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 NexusMart. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/ui.js"></script>
+  </body>
+</html>

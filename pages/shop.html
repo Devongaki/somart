@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - NexusMart</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="body">
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="../index.html" class="nav__logo-link">NexusMart</a>
+        </div>
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="../index.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="shop.html" class="nav__link nav__link--active">Shop</a>
+            </li>
+            <li class="nav__item">
+              <a href="cart.html" class="nav__link">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="nav__cart-count">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="nav__theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="container">
+        <!-- Filters Section -->
+        <aside class="filters">
+          <div class="filters__header">
+            <h2 class="filters__title">Filters</h2>
+            <button class="filters__clear" onclick="clearFilters()">
+              Clear All
+            </button>
+          </div>
+
+          <!-- Search -->
+          <div class="filters__section">
+            <h3 class="filters__section-title">Search</h3>
+            <div class="filters__search">
+              <input
+                type="text"
+                class="form__input"
+                placeholder="Search products..."
+                id="searchInput"
+              />
+            </div>
+          </div>
+
+          <!-- Categories -->
+          <div class="filters__section">
+            <h3 class="filters__section-title">Categories</h3>
+            <div class="filters__categories">
+              <!-- Categories will be dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Price Range -->
+          <div class="filters__section">
+            <h3 class="filters__section-title">Price Range</h3>
+            <div class="filters__price">
+              <input
+                type="number"
+                class="form__input"
+                placeholder="Min"
+                id="minPrice"
+              />
+              <input
+                type="number"
+                class="form__input"
+                placeholder="Max"
+                id="maxPrice"
+              />
+            </div>
+          </div>
+
+          <!-- Sort -->
+          <div class="filters__section">
+            <h3 class="filters__section-title">Sort By</h3>
+            <select class="form__input" id="sortSelect">
+              <option value="">Select sorting</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Rating</option>
+              <option value="newest">Newest</option>
+            </select>
+          </div>
+        </aside>
+
+        <!-- Products Grid -->
+        <section class="products">
+          <div class="products__header">
+            <h1 class="products__title">All Products</h1>
+            <div class="products__count">
+              <span id="productCount">0</span> products found
+            </div>
+          </div>
+          <div class="products__grid">
+            <!-- Products will be dynamically populated -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__section">
+          <h3 class="footer__title">About Us</h3>
+          <p class="footer__text">
+            NexusMart is your one-stop destination for premium products.
+          </p>
+        </div>
+        <div class="footer__section">
+          <h3 class="footer__title">Quick Links</h3>
+          <ul class="footer__list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h3 class="footer__title">Connect With Us</h3>
+          <div class="footer__social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 NexusMart. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/ui.js"></script>
+  </body>
+</html>

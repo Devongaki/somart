@@ -1,0 +1,35 @@
+<!-- Product Card -->
+<div class="card">
+  <div class="card__image-container">
+    <img src="" alt="" class="card__image" data-src="" />
+    <div class="card__overlay">
+      <button
+        class="button button--primary card__quick-view"
+        onclick="quickView()"
+      >
+        Quick View
+      </button>
+      <button
+        class="button button--secondary card__add-to-cart"
+        onclick="addToCart()"
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+  <div class="card__content">
+    <h3 class="card__title"></h3>
+    <div class="card__rating">
+      <div class="rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+      </div>
+      <span class="card__review-count"></span>
+    </div>
+    <div class="card__price"></div>
+    <div class="card__stock"></div>
+  </div>
+</div>
