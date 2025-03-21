@@ -670,53 +670,74 @@
 
 /* Service Cards */
 .service-card {
-  padding: var(--spacing-xl);
-  background-color: var(--color-white);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .service-card__icon {
   width: 64px;
   height: 64px;
-  margin: 0 auto var(--spacing-lg);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-primary-light);
-  color: var(--color-primary);
-  border-radius: 50%;
-  font-size: var(--text-2xl);
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-light) 100%
+  );
+  box-shadow: 0 4px 12px rgba(168, 124, 79, 0.2);
+}
+
+.service-card__icon i {
+  font-size: 24px;
+  color: var(--color-white);
 }
 
 .service-card__title {
-  font-size: var(--text-xl);
-  margin-bottom: var(--spacing-sm);
-  color: var(--color-text-primary);
+  color: var(--color-white);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .service-card__description {
-  font-size: var(--text-base);
-  color: var(--color-text-secondary);
-  margin-bottom: var(--spacing-lg);
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
   line-height: 1.6;
 }
 
 .service-card__link {
   color: var(--color-primary);
   font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   transition: color 0.3s ease;
 }
 
 .service-card__link:hover {
-  color: var(--color-primary-dark);
+  color: var(--color-primary-light);
+}
+
+.service-card__link i {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.service-card__link:hover i {
+  transform: translateX(4px);
 }
 
 /* Slider Controls */

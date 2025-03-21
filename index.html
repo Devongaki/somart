@@ -3,15 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NexusMart - Modern Furniture Store</title>
+    <title>Somart - Modern Furniture Store</title>
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/pages.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="#" id="favicon" />
+    <script>
+      // Create dynamic favicon
+      const favicon = `
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 2c6.627 0 12 5.373 12 12s-5.373 12-12 12S4 22.627 4 16 9.373 4 16 4zm-2 4c-3.314 0-6 2.686-6 6 0 2.088 1.07 3.926 2.688 5H8v2h16v-2h-2.688C22.93 17.926 24 16.088 24 14c0-3.314-2.686-6-6-6h-4zm0 2h4c2.206 0 4 1.794 4 4s-1.794 4-4 4h-4c-2.206 0-4-1.794-4-4s1.794-4 4-4z" fill="#A87C4F"/>
+        </svg>
+      `;
+      const blob = new Blob([favicon], { type: "image/svg+xml" });
+      const url = URL.createObjectURL(blob);
+      document.getElementById("favicon").href = url;
+    </script>
     <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Remix icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
     />
   </head>
   <body class="body">
@@ -126,7 +144,7 @@
           <div class="hero__slide active">
             <div class="hero__image">
               <img
-                src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=1920&q=100"
+                src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=1920&q=100"
                 alt="Luxury Living Space"
               />
             </div>
@@ -135,36 +153,52 @@
               <span class="hero__promo-text">Up to 50% Off Selected Items</span>
             </div>
             <div class="hero__content container">
-              <span class="hero__label">Luxury Furniture</span>
+              <span class="hero__label">Premium Collection</span>
               <h1 class="hero__title">
-                Elevate Your Living Space with
-                <span class="text-gradient">Timeless Design</span>
+                Transform Your Space With
+                <span class="text-gradient">Timeless Elegance</span>
               </h1>
               <p class="hero__subtitle">
-                Discover our curated collection of premium furniture pieces that
-                blend sophistication with comfort. Transform your home into a
-                masterpiece.
+                Discover our curated collection of luxury furniture pieces that
+                blend sophistication with comfort. Each piece tells a story of
+                craftsmanship and design excellence.
               </p>
               <div class="hero__buttons">
-                <a href="#collections" class="button button--primary"
-                  >Explore Collection</a
-                >
-                <a href="#featured" class="button button--outline"
-                  >New Arrivals</a
-                >
+                <a href="#collections" class="button button--primary">
+                  Shop Collection <i class="ri-arrow-right-line"></i>
+                </a>
+                <a href="#featured" class="button button--outline">
+                  New Arrivals <i class="ri-arrow-right-line"></i>
+                </a>
               </div>
               <div class="hero__features">
                 <div class="hero__feature">
-                  <i class="fas fa-truck"></i>
-                  <span>Free Delivery</span>
-                </div>
-                <div class="hero__feature">
-                  <i class="fas fa-star"></i>
+                  <i class="ri-shield-star-line"></i>
                   <span>Premium Quality</span>
                 </div>
                 <div class="hero__feature">
-                  <i class="fas fa-shield-alt"></i>
-                  <span>5 Year Warranty</span>
+                  <i class="ri-truck-line"></i>
+                  <span>Free Shipping</span>
+                </div>
+                <div class="hero__feature">
+                  <i class="ri-customer-service-2-line"></i>
+                  <span>24/7 Support</span>
+                </div>
+              </div>
+            </div>
+            <div class="hero__overlay">
+              <div class="hero__stats container">
+                <div class="hero__stat">
+                  <span class="hero__stat-number">20+</span>
+                  <span class="hero__stat-label">Years of Excellence</span>
+                </div>
+                <div class="hero__stat">
+                  <span class="hero__stat-number">10k+</span>
+                  <span class="hero__stat-label">Happy Clients</span>
+                </div>
+                <div class="hero__stat">
+                  <span class="hero__stat-number">100%</span>
+                  <span class="hero__stat-label">Quality Assured</span>
                 </div>
               </div>
             </div>
@@ -262,38 +296,17 @@
         </div>
 
         <div class="hero__controls">
-          <button
-            class="hero__arrow hero__arrow--prev"
-            aria-label="Previous slide"
-          >
-            <i class="fas fa-chevron-left"></i>
+          <button class="hero__arrow hero__arrow--prev">
+            <i class="ri-arrow-left-s-line"></i>
           </button>
-          <div class="hero__dots"></div>
-          <button class="hero__arrow hero__arrow--next" aria-label="Next slide">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
-
-        <div class="hero__scroll-indicator">
-          <span class="hero__scroll-text">Explore More</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-
-        <div class="hero__overlay">
-          <div class="hero__stats container">
-            <div class="hero__stat">
-              <span class="hero__stat-number">20+</span>
-              <span class="hero__stat-label">Years of Excellence</span>
-            </div>
-            <div class="hero__stat">
-              <span class="hero__stat-number">10k+</span>
-              <span class="hero__stat-label">Happy Clients</span>
-            </div>
-            <div class="hero__stat">
-              <span class="hero__stat-number">100%</span>
-              <span class="hero__stat-label">Quality Assured</span>
-            </div>
+          <div class="hero__dots">
+            <span class="hero__dot active"></span>
+            <span class="hero__dot"></span>
+            <span class="hero__dot"></span>
           </div>
+          <button class="hero__arrow hero__arrow--next">
+            <i class="ri-arrow-right-s-line"></i>
+          </button>
         </div>
       </section>
 
@@ -450,52 +463,57 @@
       </section>
 
       <!-- Services Section -->
-      <section class="services section-padding bg-light">
+      <section class="services" id="services">
         <div class="container">
-          <div class="section-header">
-            <span class="section-label">Our Services</span>
-            <h2 class="section-title">Complete Solutions</h2>
-            <p class="section-subtitle">
+          <div class="section__header">
+            <span class="section__subtitle">OUR SERVICES</span>
+            <h2 class="section__title">Complete Solutions</h2>
+            <p class="section__description">
               Comprehensive support for your interior needs
             </p>
           </div>
+
           <div class="services__grid">
-            <div class="service-card animate-fade-in">
+            <div class="service-card">
               <div class="service-card__icon">
-                <i class="fas fa-ruler-combined"></i>
+                <i class="ri-ruler-2-line"></i>
               </div>
               <h3 class="service-card__title">Design Consultation</h3>
               <p class="service-card__description">
                 Expert guidance from our interior designers to bring your vision
-                to life
+                to life. We help you create spaces that reflect your style.
               </p>
-              <a href="/services/design" class="service-card__link"
-                >Learn More</a
-              >
+              <a href="#" class="service-card__link">
+                Learn More <i class="ri-arrow-right-line"></i>
+              </a>
             </div>
-            <div class="service-card animate-fade-in" style="--delay: 0.2s">
+
+            <div class="service-card">
               <div class="service-card__icon">
-                <i class="fas fa-truck"></i>
+                <i class="ri-truck-fill"></i>
               </div>
               <h3 class="service-card__title">White Glove Delivery</h3>
               <p class="service-card__description">
-                Professional delivery and assembly by our trained specialists
+                Professional delivery and assembly by our trained specialists.
+                We ensure your furniture arrives safely.
               </p>
-              <a href="/services/delivery" class="service-card__link"
-                >Learn More</a
-              >
+              <a href="#" class="service-card__link">
+                Learn More <i class="ri-arrow-right-line"></i>
+              </a>
             </div>
-            <div class="service-card animate-fade-in" style="--delay: 0.4s">
+
+            <div class="service-card">
               <div class="service-card__icon">
-                <i class="fas fa-paint-brush"></i>
+                <i class="ri-tools-fill"></i>
               </div>
               <h3 class="service-card__title">Custom Solutions</h3>
               <p class="service-card__description">
-                Tailored furniture pieces designed to your specifications
+                Tailored furniture pieces designed to your specifications.
+                Perfect fit for your unique space.
               </p>
-              <a href="/services/custom" class="service-card__link"
-                >Learn More</a
-              >
+              <a href="#" class="service-card__link">
+                Learn More <i class="ri-arrow-right-line"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -539,7 +557,7 @@
     <footer class="footer">
       <div class="footer__content container">
         <div class="footer__brand">
-          <a href="/" class="footer__logo">NexusMart</a>
+          <a href="/" class="footer__logo">Somart</a>
           <p class="footer__description">
             Crafting exceptional living spaces with premium furniture and
             unparalleled design expertise.
@@ -587,16 +605,14 @@
                 10001
               </li>
               <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-              <li><i class="fas fa-envelope"></i> hello@nexusmart.com</li>
+              <li><i class="fas fa-envelope"></i> hello@somart.com</li>
             </ul>
           </div>
         </nav>
       </div>
       <div class="footer__bottom">
         <div class="container">
-          <p class="footer__copyright">
-            © 2024 NexusMart. All rights reserved.
-          </p>
+          <p class="footer__copyright">© 2024 Somart. All rights reserved.</p>
           <ul class="footer__legal">
             <li><a href="/privacy">Privacy Policy</a></li>
             <li><a href="/terms">Terms of Service</a></li>
